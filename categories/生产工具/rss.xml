@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生产工具 on 郑六科技工作室</title><link>/categories/%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%85%B7/</link><description>Recent content in 生产工具 on 郑六科技工作室</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 29 Aug 2022 12:13:00 +0800</lastBuildDate><atom:link href="/categories/%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%85%B7/rss.xml" rel="self" type="application/rss+xml"/><item><title>道破——VSCode</title><link>/tool/vscode.html</link><pubDate>Mon, 29 Aug 2022 12:13:00 +0800</pubDate><guid>/tool/vscode.html</guid><description>本文所写皆为Windows下VSCode的使用方法。 1. 安装 访问 Visual Studio Code 下载对应系统版本并安装。 安装完默认界面语言是英语，按Ctrl+Shift</description></item><item><title>道破——Git Bash</title><link>/tool/gitbash.html</link><pubDate>Mon, 29 Aug 2022 07:23:00 +0800</pubDate><guid>/tool/gitbash.html</guid><description>1. 原理 Git是一个基于快照的分布式版本控制系统，通常用于代码版本控制。 在使用上需了解工作区、暂存区、本地仓库、远程仓库，尤其是分支的概念。 工</description></item><item><title>道破——Markdown</title><link>/tool/markdown.html</link><pubDate>Sun, 28 Aug 2022 20:38:00 +0800</pubDate><guid>/tool/markdown.html</guid><description>1. 标题 1 2 3 4 5 6 # 1级标题 ## 2级标题 ### 3级标题 #### 4级标题 ##### 5级标题 ###### 6级标题 效果： 1级标题 2级标题 3级标题 4级标题 5级标题 6级标题 2. 字体 1</description></item><item><title>道破——VSCode Plugin——Markdown All In One</title><link>/tool/vscode-md.html</link><pubDate>Sun, 28 Aug 2022 19:51:00 +0800</pubDate><guid>/tool/vscode-md.html</guid><description>1. 安装 打开VSCode扩展界面（快捷键Ctrl+Shift+X），搜索Markdown All in One并安装。 2. 快捷键 2.1. 预览 按Ctrl+Shift</description></item><item><title>道破——GitHub Pages</title><link>/tool/github-pages.html</link><pubDate>Sun, 28 Aug 2022 10:26:00 +0800</pubDate><guid>/tool/github-pages.html</guid><description>快速上手 登录GitHub创建一个新项目 项目名为[username].github.io，其中[username]换成自己的GitHub用户名</description></item><item><title>道破——Hugo</title><link>/tool/hugo.html</link><pubDate>Sat, 27 Aug 2022 15:27:01 +0800</pubDate><guid>/tool/hugo.html</guid><description>&lt;h1 id="1-快速上手">1. 快速上手&lt;/h1>
+&lt;ol>
+&lt;li>下载
+&lt;a href="https://github.com/gohugoio/hugo/releases" title="Hugo" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Hugo
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>对应系统版本并安装。&lt;/li>
+&lt;/ol>
+&lt;p>Windows&lt;/p>
+&lt;blockquote>
+&lt;p>将hugo.exe放到任意目录，并将该目录添加到系统-高级系统设置-环境变量&lt;/p>
+&lt;/blockquote>
+&lt;p>Linux&lt;/p>
+&lt;blockquote>
+&lt;p>将hugo放到/usr/local/bin下&lt;/p>
+&lt;/blockquote>
+&lt;p>Mac&lt;/p>
+&lt;blockquote>
+&lt;p>通过homebrew安装&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>brew install hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>检查安装是否成功&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>hugo help
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>创建新站点&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>hugo new site quickstart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>添加主题&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>cd quickstart
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>echo theme = \&amp;#34;ananke\&amp;#34; &amp;gt;&amp;gt; config.toml
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>添加内容&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>hugo new posts/my-first-post.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="5">
+&lt;li>启动服务器&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>hugo server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果需要外部访问，执行命令时指定绑定IP：0.0.0.0&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>hugo server --bind=&amp;#34;0.0.0.0&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="6">
+&lt;li>访问
+&lt;a href="http://localhost:1313/" title="http://localhost:1313/" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+http://localhost:1313/
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h1 id="2-配置">2. 配置&lt;/h1>
+&lt;h2 id="21-toml和yml">2.1. .toml和.yml&lt;/h2>
+&lt;p>学习配置之前必须掌握toml和yaml的用法，以免遇到不必要的报错。&lt;/p>
+&lt;p>TOML详细用法查看
+&lt;a href="https://toml.io/cn" title="TOML教程" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+TOML教程
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>&lt;/p>
+&lt;p>YAML详细用法查看
+&lt;a href="https://yaml.org/" title="YAML教程" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+YAML教程
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>&lt;/p>
+&lt;h1 id="3-发布">3. 发布&lt;/h1>
+&lt;p>GitHub Pages的发布方法请参考
+&lt;a href="/tool/github-pages.html" title="道破——GitHub Pages" >
+道破——GitHub Pages
+&lt;/a>&lt;/p>
+&lt;h1 id="4-主题">4. 主题&lt;/h1>
+&lt;p>官方文档中用例是
+&lt;a href="https://github.com/theNewDynamic/gohugo-theme-ananke" title="Ananke" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Ananke
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>。&lt;/p>
+&lt;p>如果不喜欢这款主题，可以去
+&lt;a href="https://themes.gohugo.io/" title="Hugo Themes" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Hugo Themes
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>挑选一款最近仍在更新的主题。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>一定要注意主题作者提供的使用文档，我在试了几个主题之后，发现需要修改太多以前写作的md文本Front-matter，如果不按照作者提供的关键字修改，&lt;/strong>
+&lt;strong>服务根本跑不起来，所以我选择了从Hexo-NexT移植的
+&lt;a href="https://github.com/hugo-next/hugo-theme-next" title="hugo-theme-next" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+hugo-theme-next
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>主题，可以参考作者提供的文档进行配置。&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="41-next快速上手">4.1. NexT快速上手&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>hugo new site hugo-next-example
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd hugo-next-example
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule add https://github.com/hugo-next/hugo-theme-next.git themes/hugo-theme-next
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cp -r themes/hugo-theme-next/exampleSite/* .
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rf config.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hugo server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>执行完以上命令后，访问
+&lt;a href="http://localhost:1313/" title="http://localhost:1313/" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+http://localhost:1313/
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>&lt;/p>
+&lt;p>后续更新主题只需要在你的站点目录中，执行如下命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>cd hugo-next-example
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule update --remote
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>作者非常贴心，把已实现的和计划实现的功能配置都写在&lt;code>config.yml&lt;/code>中了，注释直观清晰，有需要的功能直接改。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="42-创建新篇">4.2. 创建新篇&lt;/h2>
+&lt;p>使用Hugo快速创建新篇。&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>hugo new posts/hello-world.md
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>关于文章头部那些参数作用的说明参考如下：&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>---
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 文章标题
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">&lt;/span>title: &amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 文章内容摘要
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">&lt;/span>description: &amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 文章内容关键字
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">&lt;/span>keywords: &amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 发表日期
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">&lt;/span>date:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 最后修改日期
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">&lt;/span>lastmod:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 分类
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">&lt;/span>categories:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#859900">-&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span># 标签
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tags:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#859900">-&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 原文作者
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#author:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 原文链接
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#link:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 图片链接，用在open graph和twitter卡片上
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#imgs:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 在首页展开内容
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#expand: true
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 外部链接地址，访问时直接跳转
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#extlink:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 在当前页面开启或关闭评论功能
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#comment:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># enable: false
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 开启文章目录功能
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#toc: false
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 绝对访问路径
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#url: &amp;#34;{{ lower .Name }}.html&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682"># 开启文章置顶，数字越小越靠前
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">#weight: 1
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#d33682">&lt;/span>---
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="43-主题支持语法">4.3. 主题支持语法&lt;/h2>
+&lt;h3 id="431-块引用">4.3.1. 块引用&lt;/h3>
+&lt;p>在引用一些经典名言名句时，可以采用此短语，语法参考如下：&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>{{&amp;lt; &lt;span style="color:#268bd2;font-weight:bold">quote&lt;/span> &amp;gt;}}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ### block quote
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 写下你想表达的话语！
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{{&amp;lt; /&lt;span style="color:#268bd2;font-weight:bold">quote&lt;/span> &amp;gt;}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>实际效果：&lt;/p>
+&lt;blockquote class="blockquote-center">
+&lt;p>希望是无所谓有，无所谓无的，这正如地上的路。&lt;/p>
+&lt;p>其实地上本没有路，走的人多了，也便成了路。&lt;/p>
+&lt;p>&lt;strong>鲁迅&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="432-信息块">4.3.2. 信息块&lt;/h3>
+&lt;p>支持 &lt;code>default&lt;/code>，&lt;code>info&lt;/code>，&lt;code>success&lt;/code>，&lt;code>warning&lt;/code>，&lt;code>danger&lt;/code> 等五种不同效果的展示，语法参考如下：&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="color:#586e75;background-color:#eee8d5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-markdown" data-lang="markdown">&lt;span style="display:flex;">&lt;span>{{&amp;lt; &lt;span style="color:#268bd2;font-weight:bold">note&lt;/span> [&lt;span style="color:#268bd2">class&lt;/span>] [&lt;span style="color:#268bd2">no-icon&lt;/span>] &amp;gt;}}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 书写表达的信息
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 支持 Markdown 语法
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{{&amp;lt; /&lt;span style="color:#268bd2;font-weight:bold">note&lt;/span> &amp;gt;}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>实际效果：&lt;/p>
+&lt;div class="note default no-icon">
+&lt;h3 id="433-default-header-without-icon">4.3.3. Default Header without icon&lt;/h3>
+&lt;p>&lt;strong>Welcome&lt;/strong> to
+&lt;a href="https://preview.hugo-next.eu.org" title="Hugo NexT!" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Hugo NexT!
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>
+&lt;/div>
+&lt;div class="note default ">
+&lt;h3 id="434-default-header">4.3.4. Default Header&lt;/h3>
+&lt;p>&lt;strong>Welcome&lt;/strong> to
+&lt;a href="https://preview.hugo-next.eu.org" title="Hugo NexT!" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Hugo NexT!
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>
+&lt;/div>
+&lt;div class="note info ">
+&lt;h3 id="435-info-header">4.3.5. Info Header&lt;/h3>
+&lt;p>&lt;strong>Welcome&lt;/strong> to
+&lt;a href="https://preview.hugo-next.eu.org" title="Hugo NexT!" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Hugo NexT!
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>
+&lt;/div>
+&lt;div class="note success ">
+&lt;h3 id="436-success-header">4.3.6. Success Header&lt;/h3>
+&lt;p>&lt;strong>Welcome&lt;/strong> to
+&lt;a href="https://preview.hugo-next.eu.org" title="Hugo NexT!" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Hugo NexT!
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>
+&lt;/div>
+&lt;div class="note warning ">
+&lt;h3 id="437-warning-header">4.3.7. Warning Header&lt;/h3>
+&lt;p>&lt;strong>Welcome&lt;/strong> to
+&lt;a href="https://preview.hugo-next.eu.org" title="Hugo NexT!" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Hugo NexT!
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>
+&lt;/div>
+&lt;div class="note danger ">
+&lt;h3 id="438-danger-header">4.3.8. Danger Header&lt;/h3>
+&lt;p>&lt;strong>Welcome&lt;/strong> to
+&lt;a href="https://preview.hugo-next.eu.org" title="Hugo NexT!" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+Hugo NexT!
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>
+&lt;/div>
+&lt;h1 id="5-emoji">5. Emoji&lt;/h1>
+&lt;p>Emoji 可以通过多种方式在 Hugo 项目中启用。&lt;/p>
+&lt;p>
+&lt;a href="https://gohugo.io/functions/emojify/" title="&amp;lt;code&amp;gt;emojify&amp;lt;/code&amp;gt;" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+&lt;code>emojify&lt;/code>
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a> 方法可以直接在模板中调用, 或者使用
+&lt;a href="https://gohugo.io/templates/shortcode-templates#inline-shortcodes" title="行内 Shortcodes" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+行内 Shortcodes
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>.&lt;/p>
+&lt;p>要全局使用 emoji, 需要在你的
+&lt;a href="https://gohugo.io/getting-started/configuration/" title="网站配置" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+网站配置
+&lt;i class="fa fa-external-link-alt">&lt;/i>
+&lt;/a>中设置 &lt;code>enableEmoji&lt;/code> 为 &lt;code>true&lt;/code>，
+然后你就可以直接在文章中输入 emoji 的代码。&lt;/p></description></item><item><title>道破——VuePress</title><link>/tool/vuepress.html</link><pubDate>Fri, 26 Aug 2022 11:55:00 +0800</pubDate><guid>/tool/vuepress.html</guid><description>1. 开始 1.1. 准备环境 VuePress v2.0.0-beta.49 Nodejs 18.7.0 (npm 8.15.0) Yarn 1.22.19 yrm 1.0.6 下载Nodejs 对应版本并安装。 安装yarn 1 npm install -g yarn --registry=https://registry.npm.taobao.org 安装yrm并指定淘宝源 1 2 3 npm install -g yrm --registry=https://registry.npm.taobao.org yrm ls yrm use taobao</description></item><item><title>道破——电子笔记与开发文档</title><link>/tool/note.html</link><pubDate>Thu, 25 Aug 2022 14:37:00 +0800</pubDate><guid>/tool/note.html</guid><description>1. 背景 自从参加工作并将PC作为生产工具而非游戏机之时，文本编辑器的更新换代成了折腾我的历史中的一部分，而笔记工具逐渐由txt、Word、印象</description></item></channel></rss>

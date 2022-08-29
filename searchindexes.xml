@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>公告</title><url>/notice.html</url><categories/><tags/><content type="html">本人作为新时代中国特色社会主义新中年，始终坚持奉行社会主义核心价值观：
+富强、民主、文明、和谐；自由、平等、公正、法治；爱国、敬业、诚信、友善 由于本站部分内容可能为爬虫获取、非本人原创，如发现本站涉及违法乱纪的相关内容，请及时联系站长，站长会第一时间删除并进行自我反省、自我批评。</content></entry><entry><title>道破——VSCode</title><url>/tool/vscode.html</url><categories><category>生产工具</category></categories><tags><tag>VSCode</tag><tag>道破系列</tag></tags><content type="html">本文所写皆为Windows下VSCode的使用方法。
+1. 安装 访问 Visual Studio Code 下载对应系统版本并安装。
+安装完默认界面语言是英语，按Ctrl+Shift+X打开扩展窗口， 搜索并安装Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code 这个汉化插件，安装完重启编辑器即可。
+2. 快捷键 先按Ctrl+K，紧接着按Ctrl+S，打开快捷键绑定界面。
+Ctrl+Shift+P，根据当前光标上下文访问所有可用命令。
+Ctrl+P，快速打开文件。输入?查看命令建议。多次按右方向键打开多个文件。
+Ctrl+R，显示最近打开的文件夹和工作区。
+Ctrl+Shift+E，打开资源管理器窗口。
+Ctrl+Shift+X，打开扩展窗口。
+Ctrl+Shift+M，打开控制台和调试窗口。使用F8或Shift+F8快速循环切换错误并移动光标到错误处。
+Ctrl+'，打开终端窗口。
+Ctrl+K M，更改编辑器对当前文件的编程语言支持。
+Ctrl+K Ctrl+T，更改编辑器主题。
+Ctrl+K Z，切换全屏模式。
+Ctrl+1、Ctrl+2、Ctrl+3，切换编辑器窗口。
+Ctrl+TAB，切换内容编辑窗口。
+Alt+Left/Right，切换历史光标位置。
+Ctrl+/，为选中行加注释。
+Ctrl+\，以当前文件新开一个分屏窗口。
+Ctrl+K F，关闭当前打开的文件夹。
+Ctrl+Shift+L，可以更改与选中内容相同的所有内容。
+多次按Ctrl+D，可以逐个选中相同的内容，随后进行统一更改。
+按住Shift+Alt，再用鼠标拖拽，可以以代码块的模式选择内容。
+按住Alt，滑动鼠标滚轮，可快速滑动文本。
+Ctrl+Shift+K，删除光标所在行。
+Shift+Alt+Up/Down，复制行向上/向下。
+Alt+Up/Down，移动行向上/向下。
+Shift+Alt+Left/Right，选择收缩/扩展。
+Ctrl+Shift+O，快速转到文中的符号。
+Ctrl+T，快速转到工作空间中的符号。
+Ctrl+G，跳转到指定行。
+Ctrl+K Ctrl+X，修剪尾部空格。
+Ctrl+K Ctrl+F，格式化选中文档。
+Shift+Alt+F，格式化整个文档。
+Ctrl+[或]，行缩进。
+Ctrl+Shift+[或]，代码折叠。
+Ctrl+K Ctrl+0，折叠全部代码。
+Ctrl+K Ctrl+J，展开全部代码。
+Ctrl+K Ctrl+/，折叠全部注释。
+Ctrl+空格，智能补全。
+快捷键参考表 3. 命令行 使用VSCode打开当前目录
+1 code . 使用最近打开的VSCode窗口打开当前目录
+1 code -r . 打开一个新的VSCode窗口
+1 code -n 以指定语言打开VSCode窗口
+1 2 code --locale=es code --locale=zh-cn 对比文件1和文件2
+1 code --diff file1 file2 打开指定文件并将光标移到指定行列 file:line[:character]
+1 code --goto package.json:10:5 查看帮助
+1 code --help 禁用所有扩展打开VSCode窗口
+1 code --disable-extensions . 4. 参考 VSCode Docs</content></entry><entry><title>道破——Git Bash</title><url>/tool/gitbash.html</url><categories><category>生产工具</category></categories><tags><tag>Git</tag><tag>道破系列</tag></tags><content type="html"><![CDATA[1. 原理 Git是一个基于快照的分布式版本控制系统，通常用于代码版本控制。
+在使用上需了解工作区、暂存区、本地仓库、远程仓库，尤其是分支的概念。
+工作区、暂存区、本地仓库和分支是组成一个本地计算机代码版本控制中最核心的功能。
+远程仓库是为保证不同时间、不同地点的开发人员协同工作，保证代码数据安全、分布式部署在不同机房的系统， 类似GitHub、GitLab、Gitee等开放托管站点，也可以是自己公司内部搭建的私有托管服务。
+一个简单且完整的项目代码版本控制流程：
+提交： 从初始化git init开始，对工作区文件的修改通过git add加入暂存区， 通过git commit提交到本地仓库，再通过git push提交到远程仓库。
+获取： 从远程仓库通过git clone克隆一份完整相同的项目代码副本到本地仓库， 通过git pull拉取远程仓库中项目代码的所有修改。
+项目代码版本控制通过分支和快照实现。 项目代码第一次提交到本地仓库需要创建或指定一个主分支main，也就是发行版分支， 以后创建的每个分支都是从指定的任意分支拷贝， 通过创建不同的分支，可以实现项目开发中不同开发小组的协同工作， 一个项目被分成&quot;功能A&quot;分支、&quot;功能B&quot;分支、&quot;功能C&quot;分支等等， 最后通过git merge将测试好的功能代码合并到发行版分支。 在本地仓库每一次git commit都生成一个版本快照， 并且通过索引实现保留多个提交版本的变更历史记录。 分支和快照非常符合多元宇宙的概念。
+访问 Git CheatSheet ，大致了解一下Git的工作原理。
+也可访问 Git Book ，下载Pro git这本书，书中有超级详细的讲解。
+2. 安装 前往 Git官网 下载最新版安装包，
+一般情况下，安装步骤都选默认即可。
+3. 常用命令 3.1. 配置本地用户信息 对你的commit操作设置关联的用户名
+1 git config --global user.name &#34;[name]&#34; 对你的commit操作设置关联的邮箱地址
+1 git config --global user.email &#34;[email address]&#34; 启用有帮助的彩色命令行输出
+1 git config --global color.ui auto 3.2. 创建仓库 当着手于一个新的仓库时，你只需创建一次。要么在本地创建，然后推送到 GitHub；要么通过 clone 一个现有仓库。
+在使用过 git init 命令后，使用以下命令将本地仓库与一个 GitHub 上的空仓库连接起来：
+1 git init 将现有目录转换为一个 Git 仓库
+1 git remote add origin [url] Clone（下载）一个已存在于 GitHub 上的仓库，包括所有的文件、分支和提交(commits)
+1 git clone [url] 3.3. 分支操作 分支是使用 Git 工作的一个重要部分。你做的任何提交都会发生在当前“checked out”到的分支上。使用 git status 查看那是哪个分支。
+创建一个新分支
+1 git branch [branch-name] 切换到指定分支并更新工作目录(working directory)
+1 git switch -c [branch-name] 将指定分支的历史合并到当前分支。这通常在拉取请求(PR)中完成，但也是一个重要的 Git 操作。
+1 git merge [branch] 删除指定分支(-D属于强制执行)
+1 2 git branch -d [branch-name] git branch -D [branch-name] 查看本地分支
+1 git branch 查看远程分支
+1 git branch -r 拉取远程分支
+1 2 git checkout -b 本地分支 origin/远程分支 git pull origin 远程分支　列出当前分支的版本历史
+1 git log 列出文件的版本历史，包括重命名
+1 git log --follow [file] 展示两个分支之间的内容差异
+1 git diff [first-branch]...[second-branch] 3.4. 文件处理 将文件进行快照处理用于版本控制
+1 git add [file] 将文件从Git仓库中删除，文件也一起删除，如果文件已经add到暂存区，加-f参数强制删除
+1 2 git rm [file] git rm -f [file] 将文件从Git仓库中删除，但仍想保留在当前工作目录中
+1 git rm --cached [file] 查看即将提交的内容
+1 git diff --cached 如果没有--cached，将显示尚未添加到索引中的任何更改
+获得当前仓库状态
+1 git status 将文件快照永久地记录在版本历史中
+1 git commit -m &#34;[descriptive message]&#34; 输出指定commit的元数据和内容变化
+1 git show [commit] 严重危险操作，需考虑数据丢失的后果。
+撤销所有 [commit] 后的的提交，在本地保存更改
+1 git reset [commit] 放弃所有历史，改回指定提交。
+1 git reset --hard [commit] 3.5. 同步仓库 查看远程仓库地址
+1 git remote -v 添加远程仓库地址，aliasname为别名，
+以后可以替代URL直接用，如果不指定aliasname，默认命名为origin
+1 git remote add aliasname https://github.com/xxx/xxx.git 在本地为远程仓库的别名换个名
+1 git remote rename aliasname newaliasname 在本地不再使用并删除指定远程仓库
+1 2 git remote remove aliasname git remote rm aliasname 查看origin仓库的更多信息
+1 git remote show origin 如果想拉取origin仓库中有但你没有的信息
+1 git fetch origin 拉取远程仓库的更新 git pull是git fetch和git merge的结合
+1 git pull 将所有本地分支提交上传到origin仓库
+1 git push 将本地当前分支提交上传到origin仓库main分支， 注意每一次上传到新指定的分支都要加-u参数， 以后再上传到同一分支就直接git push就可以了。 -u就相当于指定默认的仓库地址和分支。
+1 git push -u origin main 3.6. 标签操作 查看已有的所有标签
+1 git tag 查看指定匹配已有的所有标签
+1 git tag -l &#34;v1.0.*&#34; 创建标签（轻量标签和附注标签）
+1 2 git tag v1.0 git tag -a v1.0 -m &#34;Release 1.0&#34; 查看标签信息
+1 git show v1.0 如果以前提交的版本忘打标签了，可以后期打标签
+1 2 3 4 5 6 7 8 9 git log --pretty=oneline 15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch a6b4c97498bd301d84096da251c98a07c7723e65 beginning write 0d52aaab4479697da7686c15f77a3d64d9165190 one more thing 6d52a271eda8725415634dd79daabbc4d9b6008e Merge branch 0b7434d86859cc7b8c3d5e1dddfed66ff742fcbc added commit 4682c3261057305bdd616e23b64b0857d832627b added todo file 166ae0c4d3f420721acbb115cc33848dfcc2121a started write 以上列出了提交历史，你需要在命令的末尾指定提交的校验和（或部分校验和）。
+1 git tag -a v0.5 6d52a27 推送指定标签
+1 git push origin tagname 推送所有标签
+1 git push origin --tags 删除本地仓库指定标签
+1 git tag -d tagname 删除远程仓库指定标签
+1 git push origin --delete tagname 从远程仓库拉取标签
+1 git checkout tagname 但这样有一个问题就是远程仓库的标签是不建议修改的，修改后默认提交到远程仓库，远程仓库的标签也不会发生变化，建议直接从远程仓库拉取标签到本地并创建一个新分支，想提交再打新标签。
+1 git checkout -b newbranch tagname 4. .gitignore 文件 有时一些文件最好不要用 Git 跟踪。这通常在名为.gitignore的特殊文件中完成。
+你可以在 github gitignore 找到有用的 .gitignore 文件模板。
+文件 .gitignore 的格式规范如下：
+所有空行或者以 # 开头的行都会被 Git 忽略。 可以使用标准的 glob 模式匹配，它会递归地应用在整个工作区中。 匹配模式可以以（/）开头防止递归。 匹配模式可以以（/）结尾指定目录。 要忽略指定模式以外的文件或目录，可以在模式前加上叹号（!）取反。 例子：
+1 2 3 4 5 6 7 8 9 10 11 12 # 忽略所有的 .a 文件 *.a # 但跟踪所有的 lib.a，即便你在前面忽略了 .a 文件 !lib.a # 只忽略当前目录下的 TODO 文件，而不忽略 subdir/TODO /TODO # 忽略任何目录下名为 build 的文件夹 build/ # 忽略 doc/notes.txt，但不忽略 doc/server/arch.txt doc/*.txt # 忽略 doc/ 目录及其所有子目录下的 .pdf 文件 doc/**/*.pdf 5. ssh key ssh key是一对密钥（公钥/私钥），用于通过ssh的方式免密提交到远程仓库。
+生成新的ssh key
+1 ssh-keygen -t rsa -C &#34;your_email@example.com&#34; 一路回车即可。
+6. 完整的例子 创建一个新项目并提交到远程仓库。
+1 2 3 4 5 6 7 8 mkdir my-project cd my-project git init git add . git commit -m &#34;first commit&#34; git branch -M main git remote add origin https://github.com/xxx/my-project.git git push -u origin main 将已存在的项目提交到远程仓库。
+1 2 3 4 cd my-project git remote add origin https://github.com/xxx/my-project.git git branch -M main git push -u origin main 从远程仓库拉取一个项目到本地。
+1 2 3 git clone https://github.com/xxx/my-project.git cd my-project ls 7. 参考 Git 介绍 Git Docs Git Cheat Sheets Git Commands Git Book ]]></content></entry><entry><title>道破——Markdown</title><url>/tool/markdown.html</url><categories><category>生产工具</category></categories><tags><tag>Markdown</tag><tag>道破系列</tag></tags><content type="html"><![CDATA[1. 标题 1 2 3 4 5 6 # 1级标题 ## 2级标题 ### 3级标题 #### 4级标题 ##### 5级标题 ###### 6级标题 效果：
+1级标题 2级标题 3级标题 4级标题 5级标题 6级标题 2. 字体 1 2 3 4 普通字 *斜体* **粗体** ~~删除线~~ 效果： 普通字 斜体 粗体 删除线 3. 链接 1 2 3 4 5 6 7 8 9 10 11 [本页转址](/tool/markdown.html#链接) [打开新页](https://commonmark.org/help/) &lt;https://commonmark.org/help/&gt; 相同的url可以设置成变量：\ [Hurricane][same_url] Erika was the strongest and longest-lasting tropical cyclone\ in the 1997 Atlantic [hurricane][same_url] season. [same_url]:https://w.wiki/qYn 效果：
+本页转址 打开新页 https://commonmark.org/help/ 相同的url可以设置成变量：
+Hurricane Erika was the strongest and longest-lasting tropical cyclone
+in the 1997 Atlantic hurricane season.
+4. 图片 1 2 3 4 5 6 7 8 ![绝对路径](/imgs/site/md-favicon.png) ![完整路径](https://commonmark.org/help/images/favicon.png) 相同的url可以设置成变量： ![][same_url] [same_url]:https://commonmark.org/help/images/favicon.png 效果：
+相同的url可以设置成变量： 5. 引用 1 2 &gt;我爱劳动 &gt;—— 郑六 效果：
+我爱劳动 —— 郑六
+6. 列表 6.1. 无序列表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 * 待办1 * 待办1-1 * 待办1-1-1 * 待办1-1-1-1 * 待办1-1-1-1-1 * 待办2 * 待办3 + 待办4 + 待办5 + 待办6 - 待办7 - 待办8 - 待办9 效果：
+待办1 待办1-1 待办1-1-1 待办1-1-1-1 待办1-1-1-1-1 待办2 待办3 待办4 待办5 待办6 待办7 待办8 待办9 6.2. 有序列表 1 2 3 4 5 6 7 1. 待办1 2. 待办2 3. 待办3 4) 待办4 5) 待办5 6) 待办6 效果：
+待办1 待办2 待办3 待办4 待办5 待办6 7. 分隔符 1 2 3 4 5 6 7 8 * 开头 到底啦 --- 到底啦 *** * 结尾 效果：
+开头 7.1. 到底啦 到底啦
+结尾 8. 代码块 1 2 3 4 配置文件包括`config.yml`和`config.js`。 ``` include config.yml ``` 效果：
+配置文件包括config.yml和config.js。
+1 include config.yml 9. 转义 1 2 3 4 5 6 7 \\ \* \` \~ \_ \+ \- 效果：
+\ * ` ~ _ + - 10. 目录 每个编译器生成目录的标准不同，原生语法不带目录。
+11. 表格 1 2 3 4 5 id_lalala|real_name|phone_num :---|---:|:---: 1|张三|110 2|赵四|119 3|王五|120 效果：
+id_lalala real_name phone_num 1 张三 110 2 赵四 119 3 王五 120 12. 换行符 1 2 3 4 5 一句话之后按回车 默认是不加换行符的。 我跟张三说：“赵四跟我借了五百块，\ 说王五还他钱他有钱了就还我”。 效果：
+一句话之后按回车 默认是不加换行符的。
+我跟张三说：“赵四跟我借了五百块，
+说王五还他钱他有钱了就还我”。
+13. 参考 Markdown Reference 10 minute interactive tutorial ]]></content></entry><entry><title>道破——VSCode Plugin——Markdown All In One</title><url>/tool/vscode-md.html</url><categories><category>生产工具</category></categories><tags><tag>VSCode</tag><tag>Markdown</tag><tag>道破系列</tag></tags><content type="html">1. 安装 打开VSCode扩展界面（快捷键Ctrl+Shift+X），搜索Markdown All in One并安装。
+2. 快捷键 2.1. 预览 按Ctrl+Shift+V，在内容编辑器中打开新的Markdown预览窗口。
+按Ctrl+K再按V，在编辑器右侧打开Markdown分屏预览。
+2.2. 内容编辑 按Ctrl+B，光标所在行加粗。
+按Ctrl+I，光标所在行改为斜体。
+按Alt+S，光标所在行加上删除线。
+按Ctrl+Shift+[或]，光标所在行成为标题。
+按Alt+上/下，移动光标所在行。
+按Alt+Shift+上/下，复制光标所在行。
+按Alt+Shift+左/右，自动选择内容或代码块。
+从资源管理器中拖拽图片或文件到内容编辑器，同时按住Shift，会生成链接。 按Alt+Shift+F，将文本中表格转成可视化格式。
+1 2 3 aaa|bbb|ccc ---|---|--- a|b|c 变化后：
+1 2 3 | aaa | bbb | ccc | | --- | --- | --- | | a | b | c | 选中内容按Ctrl+V，直接粘贴剪贴板中的链接。
+2.3. 补全 按Ctrl+空格键（触发建议、智能补全），获得特定于上下文的建议列表。
+2.4. 快捷操作 按Ctrl+Shift+O或Ctrl+T可使光标快速定位到指定标题。
+按Ctrl+Shift+P，打开快捷操作搜索窗口。
+光标移动到标题处，按Ctrl+Shift+P，搜section回车，自动添加/删除标题序号。</content></entry><entry><title>道破——GitHub Pages</title><url>/tool/github-pages.html</url><categories><category>生产工具</category></categories><tags><tag>GitHub-Pages</tag><tag>道破系列</tag></tags><content type="html"><![CDATA[快速上手 登录GitHub创建一个新项目 项目名为[username].github.io，其中[username]换成自己的GitHub用户名。
+权限设为Public。
+克隆到本地，并创建一个HTML 1 2 3 git clone https://github.com/username/username.github.io.git cd username.github.io echo &#34;Hello World&#34; &gt; index.html 将新内容提交到远程仓库 1 2 3 git add . git commit -m &#34;Initial commit&#34; git push -u origin main 访问https://username.github.io 使用HUGO发布 有两种发布方式：
+使用github actions持续集成，每次提交自动push到github pages发布分支。 使用hugo生成静态网页，然后手动push静态页目录到username.github.io仓库。 GitHub Actions 持续集成 创建.github/workflows/gh-pages.yml文件，配置如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 name: GitHub Pages on: push: branches: - main # Set a branch name to trigger deployment pull_request: jobs: deploy: runs-on: ubuntu-20.04 permissions: contents: write concurrency: group: ${{ github.workflow }}-${{ github.ref }} steps: - uses: actions/checkout@v3 with: submodules: true # Fetch Hugo themes (true OR recursive) fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod - name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &#39;0.101.0&#39; # extended: true - name: Build run: hugo --minify - name: Deploy uses: peaceiris/actions-gh-pages@v3 if: ${{ github.ref == &#39;refs/heads/main&#39; }} with: github_token: ${{ secrets.GITHUB_TOKEN }} publish_dir: ./public 详细了解GitHub Actions持续集成请参考：
+Host on GitHub actions-hugo 参考 GitHub Pages ]]></content></entry><entry><title>道破——Hugo</title><url>/tool/hugo.html</url><categories><category>生产工具</category></categories><tags><tag>Hugo</tag><tag>道破系列</tag></tags><content type="html"><![CDATA[1. 快速上手 下载 Hugo 对应系统版本并安装。 Windows
+将hugo.exe放到任意目录，并将该目录添加到系统-高级系统设置-环境变量
+Linux
+将hugo放到/usr/local/bin下
+Mac
+通过homebrew安装
+1 brew install hugo 检查安装是否成功
+1 2 hugo help hugo version 创建新站点 1 hugo new site quickstart 添加主题 1 2 3 4 cd quickstart git init git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke echo theme = \&#34;ananke\&#34; &gt;&gt; config.toml 添加内容 1 hugo new posts/my-first-post.md 启动服务器 1 hugo server 如果需要外部访问，执行命令时指定绑定IP：0.0.0.0
+1 hugo server --bind=&#34;0.0.0.0&#34; 访问 http://localhost:1313/ 2. 配置 2.1. .toml和.yml 学习配置之前必须掌握toml和yaml的用法，以免遇到不必要的报错。
+TOML详细用法查看 TOML教程 YAML详细用法查看 YAML教程 3. 发布 GitHub Pages的发布方法请参考 道破——GitHub Pages 4. 主题 官方文档中用例是 Ananke 。
+如果不喜欢这款主题，可以去 Hugo Themes 挑选一款最近仍在更新的主题。
+一定要注意主题作者提供的使用文档，我在试了几个主题之后，发现需要修改太多以前写作的md文本Front-matter，如果不按照作者提供的关键字修改， 服务根本跑不起来，所以我选择了从Hexo-NexT移植的 hugo-theme-next 主题，可以参考作者提供的文档进行配置。
+4.1. NexT快速上手 1 2 3 4 5 6 7 hugo new site hugo-next-example cd hugo-next-example git init git submodule add https://github.com/hugo-next/hugo-theme-next.git themes/hugo-theme-next cp -r themes/hugo-theme-next/exampleSite/* . rm -rf config.toml hugo server 执行完以上命令后，访问 http://localhost:1313/ 后续更新主题只需要在你的站点目录中，执行如下命令：
+1 2 cd hugo-next-example git submodule update --remote 作者非常贴心，把已实现的和计划实现的功能配置都写在config.yml中了，注释直观清晰，有需要的功能直接改。
+4.2. 创建新篇 使用Hugo快速创建新篇。
+1 hugo new posts/hello-world.md 关于文章头部那些参数作用的说明参考如下：
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 --- # 文章标题 title: &#34;&#34; # 文章内容摘要 description: &#34;&#34; # 文章内容关键字 keywords: &#34;&#34; # 发表日期 date: # 最后修改日期 lastmod: # 分类 categories: - # 标签 tags: - - # 原文作者 #author: # 原文链接 #link: # 图片链接，用在open graph和twitter卡片上 #imgs: # 在首页展开内容 #expand: true # 外部链接地址，访问时直接跳转 #extlink: # 在当前页面开启或关闭评论功能 #comment: # enable: false # 开启文章目录功能 #toc: false # 绝对访问路径 #url: &#34;{{ lower .Name }}.html&#34; # 开启文章置顶，数字越小越靠前 #weight: 1 --- 4.3. 主题支持语法 4.3.1. 块引用 在引用一些经典名言名句时，可以采用此短语，语法参考如下：
+1 2 3 4 {{&lt; quote &gt;}} ### block quote 写下你想表达的话语！ {{&lt; /quote &gt;}} 实际效果：
+希望是无所谓有，无所谓无的，这正如地上的路。
+其实地上本没有路，走的人多了，也便成了路。
+鲁迅
+4.3.2. 信息块 支持 default，info，success，warning，danger 等五种不同效果的展示，语法参考如下：
+1 2 3 4 {{&lt; note [class] [no-icon] &gt;}} 书写表达的信息 支持 Markdown 语法 {{&lt; /note &gt;}} 实际效果：
+4.3.3. Default Header without icon Welcome to Hugo NexT! 4.3.4. Default Header Welcome to Hugo NexT! 4.3.5. Info Header Welcome to Hugo NexT! 4.3.6. Success Header Welcome to Hugo NexT! 4.3.7. Warning Header Welcome to Hugo NexT! 4.3.8. Danger Header Welcome to Hugo NexT! 5. Emoji Emoji 可以通过多种方式在 Hugo 项目中启用。
+emojify 方法可以直接在模板中调用, 或者使用 行内 Shortcodes .
+要全局使用 emoji, 需要在你的 网站配置 中设置 enableEmoji 为 true， 然后你就可以直接在文章中输入 emoji 的代码。
+它们以冒号开头和结尾，并且包含 emoji 的 代码：
+1 2 3 去露营啦! {:}tent: 很快就回来. 真开心! {:}joy: 呈现的输出效果如下:
+去露营啦! ⛺ 很快就回来。
+真开心! 😂
+以下符号清单是 emoji 代码的非常有用的参考。
+5.1. 表情与情感 5.1.1. 笑脸表情 图标 代码 图标 代码 😀 grinning 😃 smiley 😄 smile 😁 grin 😆 laughing satisfied 😅 sweat_smile 🤣 rofl 😂 joy 🙂 slightly_smiling_face 🙃 upside_down_face 😉 wink 😊 blush 😇 innocent 5.1.2. 爱意表情 图标 代码 图标 代码 😍 heart_eyes 😘 kissing_heart 😗 kissing ☺️ relaxed 😚 kissing_closed_eyes 😙 kissing_smiling_eyes 5.1.3. 吐舌头表情 图标 代码 图标 代码 😋 yum 😛 stuck_out_tongue 😜 stuck_out_tongue_winking_eye 😝 stuck_out_tongue_closed_eyes 🤑 money_mouth_face 5.1.4. 国家和地区旗帜 图标 代码 图标 代码 🇦🇩 andorra 🇦🇪 united_arab_emirates 🇦🇫 afghanistan 🇦🇬 antigua_barbuda 🇦🇮 anguilla 🇦🇱 albania 🇦🇲 armenia 🇦🇴 angola 🇦🇶 antarctica 🇦🇷 argentina 🇦🇸 american_samoa 🇦🇹 austria 🇦🇺 australia 🇦🇼 aruba 🇦🇽 aland_islands 🇦🇿 azerbaijan 🇧🇦 bosnia_herzegovina 🇧🇧 barbados 🇧🇩 bangladesh 🇧🇪 belgium 🇧🇫 burkina_faso 🇧🇬 bulgaria 🇧🇭 bahrain 🇧🇮 burundi 🇧🇯 benin 🇧🇱 st_barthelemy 🇧🇲 bermuda 🇧🇳 brunei 🇧🇴 bolivia 🇧🇶 caribbean_netherlands 🇧🇷 brazil 🇧🇸 bahamas 🇧🇹 bhutan 🇧🇼 botswana 🇧🇾 belarus 🇧🇿 belize 🇨🇦 canada 🇨🇨 cocos_islands 🇨🇩 congo_kinshasa 🇨🇫 central_african_republic 🇨🇬 congo_brazzaville 🇨🇭 switzerland 🇨🇮 cote_divoire 🇨🇰 cook_islands 🇨🇱 chile 🇨🇲 cameroon 🇨🇳 cn 🇨🇴 colombia 🇨🇷 costa_rica 🇨🇺 cuba 🇨🇻 cape_verde 🇨🇼 curacao 🇨🇽 christmas_island 🇨🇾 cyprus 🇨🇿 czech_republic 🇩🇪 de 🇩🇯 djibouti 🇩🇰 denmark 🇩🇲 dominica 🇩🇴 dominican_republic 🇩🇿 algeria 🇪🇨 ecuador 🇪🇪 estonia 🇪🇬 egypt 🇪🇭 western_sahara 🇪🇷 eritrea 🇪🇸 es 🇪🇹 ethiopia 🇪🇺 eu european_union 🇫🇮 finland 🇫🇯 fiji 🇫🇰 falkland_islands 🇫🇲 micronesia 🇫🇴 faroe_islands 🇫🇷 fr 🇬🇦 gabon 🇬🇧 gb uk 🇬🇩 grenada 🇬🇪 georgia 🇬🇫 french_guiana 🇬🇬 guernsey 🇬🇭 ghana 🇬🇮 gibraltar 🇬🇱 greenland 🇬🇲 gambia 🇬🇳 guinea 🇬🇵 guadeloupe 🇬🇶 equatorial_guinea 🇬🇷 greece 🇬🇸 south_georgia_south_sandwich_islands 🇬🇹 guatemala 🇬🇺 guam 🇬🇼 guinea_bissau 🇬🇾 guyana 🇭🇰 hong_kong 🇭🇳 honduras 🇭🇷 croatia 🇭🇹 haiti 🇭🇺 hungary 🇮🇨 canary_islands 🇮🇩 indonesia 🇮🇪 ireland 🇮🇱 israel 🇮🇲 isle_of_man 🇮🇳 india 🇮🇴 british_indian_ocean_territory 🇮🇶 iraq 🇮🇷 iran 🇮🇸 iceland 🇮🇹 it 🇯🇪 jersey 🇯🇲 jamaica 🇯🇴 jordan 🇯🇵 jp 🇰🇪 kenya 🇰🇬 kyrgyzstan 🇰🇭 cambodia 🇰🇮 kiribati 🇰🇲 comoros 🇰🇳 st_kitts_nevis 🇰🇵 north_korea 🇰🇷 kr 🇰🇼 kuwait 🇰🇾 cayman_islands 🇰🇿 kazakhstan 🇱🇦 laos 🇱🇧 lebanon 🇱🇨 st_lucia 🇱🇮 liechtenstein 🇱🇰 sri_lanka 🇱🇷 liberia 🇱🇸 lesotho 🇱🇹 lithuania 🇱🇺 luxembourg 🇱🇻 latvia 🇱🇾 libya 🇲🇦 morocco 🇲🇨 monaco 🇲🇩 moldova 🇲🇪 montenegro 🇲🇬 madagascar 🇲🇭 marshall_islands 🇲🇰 macedonia 🇲🇱 mali 🇲🇲 myanmar 🇲🇳 mongolia 🇲🇴 macau 🇲🇵 northern_mariana_islands 🇲🇶 martinique 🇲🇷 mauritania 🇲🇸 montserrat 🇲🇹 malta 🇲🇺 mauritius 🇲🇻 maldives 🇲🇼 malawi 🇲🇽 mexico 🇲🇾 malaysia 🇲🇿 mozambique 🇳🇦 namibia 🇳🇨 new_caledonia 🇳🇪 niger 🇳🇫 norfolk_island 🇳🇬 nigeria 🇳🇮 nicaragua 🇳🇱 netherlands 🇳🇴 norway 🇳🇵 nepal 🇳🇷 nauru 🇳🇺 niue 🇳🇿 new_zealand 🇴🇲 oman 🇵🇦 panama 🇵🇪 peru 🇵🇫 french_polynesia 🇵🇬 papua_new_guinea 🇵🇭 philippines 🇵🇰 pakistan 🇵🇱 poland 🇵🇲 st_pierre_miquelon 🇵🇳 pitcairn_islands 🇵🇷 puerto_rico 🇵🇸 palestinian_territories 🇵🇹 portugal 🇵🇼 palau 🇵🇾 paraguay 🇶🇦 qatar 🇷🇪 reunion 🇷🇴 romania 🇷🇸 serbia 🇷🇺 ru 🇷🇼 rwanda 🇸🇦 saudi_arabia 🇸🇧 solomon_islands 🇸🇨 seychelles 🇸🇩 sudan 🇸🇪 sweden 🇸🇬 singapore 🇸🇭 st_helena 🇸🇮 slovenia 🇸🇰 slovakia 🇸🇱 sierra_leone 🇸🇲 san_marino 🇸🇳 senegal 🇸🇴 somalia 🇸🇷 suriname 🇸🇸 south_sudan 🇸🇹 sao_tome_principe 🇸🇻 el_salvador 🇸🇽 sint_maarten 🇸🇾 syria 🇸🇿 swaziland 🇹🇨 turks_caicos_islands 🇹🇩 chad 🇹🇫 french_southern_territories 🇹🇬 togo 🇹🇭 thailand 🇹🇯 tajikistan 🇹🇰 tokelau 🇹🇱 timor_leste 🇹🇲 turkmenistan 🇹🇳 tunisia 🇹🇴 tonga 🇹🇷 tr 🇹🇹 trinidad_tobago 🇹🇻 tuvalu 🇹🇼 taiwan 🇹🇿 tanzania 🇺🇦 ukraine 🇺🇬 uganda 🇺🇸 us 🇺🇾 uruguay 🇺🇿 uzbekistan 🇻🇦 vatican_city 🇻🇨 st_vincent_grenadines 🇻🇪 venezuela 🇻🇬 british_virgin_islands 🇻🇮 us_virgin_islands 🇻🇳 vietnam 🇻🇺 vanuatu 🇼🇫 wallis_futuna 🇼🇸 samoa 🇽🇰 kosovo 🇾🇪 yemen 🇾🇹 mayotte 🇿🇦 south_africa 🇿🇲 zambia 🇿🇼 zimbabwe 6. Markdown 以下内容是在 NexT 主题中测试是否支持 Markdown 的各种语法，并展示实际效果。
+查看MarkDown原生语法请移步 Markdown Reference 6.1. 标题样式 让我们从所有可能的标题开始，在 HTML 中 &lt;h1&gt;-&lt;h6&gt;元素分别表示六个不同级别的标题样式，其中 &lt;h1&gt; 为最大标题，&lt;h6&gt;为最小标题，效果如下：
+1 2 3 4 5 6 # 标题 1 ## 标题 2 ### 标题 3 #### 标题 4 ##### 标题 5 ###### 标题 6 6.2. 段落格式 根据 W3C 定义的 HTML5 规范 ，HTML 文档由元素和文本组成。每个元素的组成都由一个 开始标记 表示，例如： &lt;body&gt; ，和 结束标记 表示，例如： &lt;/body&gt; 。（某些开始标记和结束标记在某些情况下可以省略，并由其他标记暗示。） 元素可以具有属性，这些属性控制元素的工作方式。例如：超链接是使用 a 元素及其 href 属性形成的。
+6.2.1. Markdown 语法 1 ![图像说明](图像地址) 6.2.2. HTML IMG 标签 1 &lt;img src=&#34;图像地址&#34; width=&#34;宽度&#34; height=&#34;高度&#34; /&gt; 6.2.3. SVG 格式 1 &lt;svg&gt;xxxxxx&lt;/svg&gt; 6.3. 列表类型 6.3.1. 有序列表 第一个元素 第二个元素 第三个元素 6.3.2. 无序列表 列表元素 另一个元素 和其它元素 6.3.3. 嵌套列表 借助 HTML 的 ul 元素来实现。
+第一项 第二项 第二项第一个子项目 第二项第二个子项目 第二项第二分项第一分项 第二项第二分项第二分项 第二项第二分项第三分项 第二项第三个子项目 第二项第三分项第一分项 第二项第三分项第二分项 第二项第三分项第三分项 第三项 6.3.4. 自定义列表 通过 HTML 的 dl 元素还支持自定义列表（表格列表）。
+Hugo 目录结构 assets config.toml content data theme static Hugo 模板 基础模板 列表模板 单页模板 6.4. 块引用 blockquote 元素表示从另一个源引用的内容，可以选择引用必须在 footer 或 cite 元素中，也可以选择使用注释和缩写等行内更改。
+引用文本 这一行也是同样的引用 同样你也在 blockquote 中使用 Markdown 语法书写
+带有引文的 Blockquote 元素效果。
+我的目标不是赚大钱,是为了制造好的电脑。当我意识到我可以永远当工程师时，我才创办了这家公司。
+— 史蒂夫·沃兹尼亚克 根据 Mozilla 的网站记录，Firefox 1.0 于 2004 年发布，并取得了巨大成功。
+6.5. 表格 表格并不算是 Markdown 的核心要素，但 Hugo 同样支持它。
+ID 创建者 模型 年份 1 Honda Accord 2009 2 Toyota Camry 2012 3 Hyundai Elantra 2010 可以使用 : （英文格式冒号）来对表格内容进行对齐。
+表格 可以是 很酷 左对齐 居中 右对齐 左对齐 居中 右对齐 左对齐 居中 右对齐 同样也可以在表格中使用 Markdown 语法。
+表格 中 使用 Markdown 语法 斜体 粗体 中划线 代码块 6.6. Code 1 2 3 4 5 6 7 8 9 10 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;Example HTML5 Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;Test&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; 1 2 3 4 5 6 7 8 9 10 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;en&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;Example HTML5 Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;p&gt;Test&lt;/p&gt; &lt;/body&gt; &lt;/html&gt; 6.7. 其它元素： abbr、sub、sup、kbd等等 GIF 是位图图像格式。
+H2O
+C6H12O6
+Xn + Yn = Zn
+按X获胜。或按CTRL+ALT+F显示 FPS 计数器。
+比特作为信息论中的信息单位，也被称为 shannon ，以信息论领域的创始人 Claude shannon 的名字命名。
+参考：
+来自 Mainroad 主题的 Basic Elements 内容 Hugo 通过 Chroma 提供非常快速的语法高亮显示，现 Hugo 中使用 Chroma 作为代码块高亮支持，它内置在 Go 语言当中，速度是真的非常、非常快，而且最为重要的是它也兼容之前我们使用的 Pygments 方式。
+以下通过 Hugo 内置短代码 highlight 和 Markdown 代码块方式分别验证不同语言的代码块渲染效果并能正确高亮显示，有关优化语法突出显示的更多信息，请参阅 Hugo 文档 。
+7. 高亮 7.1. 编程语言 7.1.1. GO 199 200 201 202 203 204 205 206 207 208 func GetTitleFunc(style string) func(s string) string { switch strings.ToLower(style) { case &#34;go&#34;: return strings.Title case &#34;chicago&#34;: return transform.NewTitleConverter(transform.ChicagoStyle) default: return transform.NewTitleConverter(transform.APStyle) } } 7.1.2. Java 1 2 3 4 5 6 7 8 9 10 11 12 import javax.swing.JFrame; //Importing class JFrame import javax.swing.JLabel; //Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); //Creating frame frame.setTitle(&#34;Hi!&#34;); //Setting title frame frame.add(new JLabel(&#34;Hello, world!&#34;));//Adding text to frame frame.pack(); //Setting size to smallest frame.setLocationRelativeTo(null); //Centering frame frame.setVisible(true); //Showing frame } } 7.1.3. Python 1 print &#34;Hello, world!&#34; 7.1.4. Git 对比 1 2 3 4 5 6 7 8 9 10 *** /path/to/original &#39;&#39;timestamp&#39;&#39; --- /path/to/new &#39;&#39;timestamp&#39;&#39; *************** *** 1 **** ! This is a line. --- 1 --- ! This is a replacement line. It is important to spell -removed line +new line *** /path/to/original &#39;&#39;timestamp&#39;&#39; --- /path/to/new &#39;&#39;timestamp&#39;&#39; *************** *** 1 **** ! This is a line. --- 1 --- ! This is a replacement line. It is important to spell -removed line +new line 7.2. 文件 7.2.1. Make 文件 CC=gcc CFLAGS=-I. hellomake: hellomake.o hellofunc.o $(CC) -o hellomake hellomake.o hellofunc.o -I. 7.2.2. Markdown 文档 1 2 3 **bold** *italics* [link](www.example.com) 7.3. 数据内容 7.3.1. JSON 数据 1 2 3 {&#34;employees&#34;:[ {&#34;firstName&#34;:&#34;John&#34;, &#34;lastName&#34;:&#34;Doe&#34;}, ]} 7.3.2. XML 内容 1 2 3 4 5 &lt;employees&gt; &lt;employee&gt; &lt;firstName&gt;John&lt;/firstName&gt; &lt;lastName&gt;Doe&lt;/lastName&gt; &lt;/employee&gt; &lt;/employees&gt; 7.3.3. SQL 查询 1 2 3 4 SELECT column_name,column_name FROM Table WHERE column_name = &#34;condition&#34; 除以上列举的代码高亮显示外，还支持诸如：C 语言、C++、HTML、CSS、Shell脚本等各主流的代码语言高亮显示，可自行测试效果。
+8. 参考 HUGO Docs Hugo NexT ]]></content></entry><entry><title>道破——VuePress</title><url>/tool/vuepress.html</url><categories><category>生产工具</category></categories><tags><tag>VuePress</tag><tag>道破系列</tag></tags><content type="html"><![CDATA[1. 开始 1.1. 准备环境 VuePress v2.0.0-beta.49
+Nodejs 18.7.0 (npm 8.15.0)
+Yarn 1.22.19
+yrm 1.0.6
+下载Nodejs 对应版本并安装。
+安装yarn
+1 npm install -g yarn --registry=https://registry.npm.taobao.org 安装yrm并指定淘宝源
+1 2 3 npm install -g yrm --registry=https://registry.npm.taobao.org yrm ls yrm use taobao 这里注意yarn版本不要升级，使用默认v1版本就行，升到v3版本会使VuePress出现不可预料的错误。
+1.2. 快速使用 创建生成器目录 1 2 mkdir vuepress-starter cd vuepress-starter 初始化项目 1 2 git init yarn init 安装VuePress为本地依赖 1 yarn add -D vuepress@next 添加scripts到根目录下package.json中 1 2 3 4 5 6 { &#34;scripts&#34;: { &#34;docs:dev&#34;: &#34;vuepress dev docs&#34;, &#34;docs:build&#34;: &#34;vuepress build docs&#34; } } 配置.gitignore以忽略缓存目录和临时目录 1 2 3 echo &#39;node_modules&#39; &gt;&gt; .gitignore echo &#39;.temp&#39; &gt;&gt; .gitignore echo &#39;.cache&#39; &gt;&gt; .gitignore 创建第一篇文档 1 2 mkdir docs echo &#39;# Hello VuePress&#39; &gt; docs/README.md 启动本地服务器 1 yarn docs:dev 访问 本地网站http://localhost:8080 1.3. 简单配置 整个vue.js框架的配置策略就是遵循“约定大于配置”，所以在直接上手使用而不是自行扩展代码的情况下，去官方文档读懂配置项就能玩转框架。
+创建一个.vuepress目录并新建一个config.js文件，目录结构如下：
+1 2 3 4 5 6 7 vuepress-starter（根目录） ├─ docs（文档目录） │ ├─ .vuepress（配置文件目录） │ │ └─ config.js（vuepress配置文件） │ └─ README.md（首页） ├─ .gitignore（git忽略配置文件） └─ package.json（项目配置） 配置config.js内容
+1 2 3 4 5 module.exports = { lang: &#39;zh-CN&#39;, title: &#39;你好， VuePress ！&#39;, description: &#39;这是我的第一个 VuePress 站点&#39;, } 1.4. 路由映射 我们再把目录结构拿出来看看，这次我新建了几个文档和目录
+1 2 3 4 5 6 7 8 9 10 11 12 13 vuepress-starter ├─ docs │ ├─ .vuepress │ │ └─ config.js │ ├─ README.md（首页） │ ├─ Category.md（归档页面） │ ├─ devtool（我自己建的**开发工具**文档目录） │ │ └─ vuepress.md（这篇文档的md源文件） │ └─ other（其他**未分类**文档目录） │ └─ index.md（其他目录的首页） │ └─ about.md（关于） ├─ .gitignore └─ package.json 也就是说默认README.md和index.md都会转为其目录下的index.html文件用以访问，然而，如果你想同时保留这两个文件，就可能会造成冲突。
+相对路径 路由路径 /README.md / /index.md / /category.md /category.html /other/index.md /other/ /other/about.md /other/about.html 1.5. Frontmatter Markdown的具体规范详见 道破——Markdown 即可。
+Markdown文件可以包含一个YAML Frontmatter。
+Frontmatter必须在Markdown文件的顶部，并且被包裹在一对三短划线中间。下面是一个基本的示例：
+1 2 3 4 5 6 7 8 --- lang: zh-CN title: 页面的标题 description: 页面的描述 --- # 开始 ... 你肯定注意到Frontmatter中的字段和配置文件中的站点配置十分类似。
+你可以通过Frontmatter来覆盖当前页面的lang, title, description等属性。
+因此，你可以把Frontmatter当作页面级作用域的配置。
+2. 配置和放弃 当我大致读了一遍官方配置之后，发现功能插件和主题样式特别少，官方支持的主题只有一个默认主题。
+我又去官方推荐的 awesome-vuepress 试用了每个第三方主题，遗憾的是，一共七个主题我试了五个，没有一个能让我快乐地成功启动。
+到社区寻找答案，发现vuepress-v2的版本属于测试版，而第三方主题并不支持v2，有些作者的版本更新滞后，作者不再维护；有些作者的戾气太重，跟提问者对线。版本管理混乱，不同版本的包引用冲突不断，导致很多不同的严重错误解决不完。
+所以对于vuepress的探索到此为止，作为一个文档生成器是合格的，但对我的需求是不符的。
+3. 参考 VuePress Yarn yrm &ndash; Yarn Registry Manager awesome-vuepress ]]></content></entry><entry><title>道破——电子笔记与开发文档</title><url>/tool/note.html</url><categories><category>生产工具</category></categories><tags><tag>道破系列</tag></tags><content type="html">1. 背景 自从参加工作并将PC作为生产工具而非游戏机之时，文本编辑器的更新换代成了折腾我的历史中的一部分，而笔记工具逐渐由txt、Word、印象笔记、GoodNote、换成现在的OneNote、各种企业的在线协同文档。发展趋势的主要特点是从纯文本到富文本、从单机到多平台再到云端共享。
+2. 需求 一款符合我使用习惯的、合格的笔记工具应该保证以下几个特性：
+免费 数据安全、及时备份 快速读写 多平台访问 异步云端共享 访问权限（可选） 3. 抉择 公司的文档共享解决方案是内网SVN+Word……
+这又存在公司和家里文档版本不统一的问题，想统一只能肉身携带笔记本或U盘，而我又不想整理那些零零散散不易索引不易对比的不同版本的Word文档，怎么办？
+首先不可否认的是，OneNote是我用过的最好用的笔记工具，但它有一个问题就是当我写完开发文档之后只能我自己看，如果想要共享给同事，存在一大堆的问题。比如同事不用OneNote、各种网络问题、共享经由邮件微信QQ等乱七八糟的应用、每多一个人我就得手动多传一次，这样的命运不得不将我安排得明明白白，OneNote的共享的的确确让我头疼不已。
+所以，
+在这个世界上，
+如何实现我写一次、人类读无数次，
+如何实现我在我的PC上记录的笔记或开发文档可以让授权用户在任意时间、任意地点访问，
+结合目前众多的开源项目和我掌握的Web技术，一款基于浏览器的静态页网站几乎是我唯一的选择，它可以满足让我抽身探索人类存在于宇宙奥秘的基本需求。
+3.1. 文本格式 Markdown是一种纯文本规范，能通过生成工具将纯文本转为HTML。
+3.2. 编辑器 避免折腾，我只用VSCode。
+3.3. 静态页生成器 Jekyll Jekyll 是用 Ruby 写的最受欢迎的开源静态生成工具之一。实际上，Jekyll 是 GitHub 页面 的引擎，它可以让你免费用 GitHub 托管网站。
+Hugo Hugo 是另一个很受欢迎的用于搭建静态网站的开源框架。它是用 Go 语言写的。
+它运行速度快、使用简单、可靠性高。如果你需要，它也可以提供更高级的主题。它还提供了一些有用的快捷方式来帮助你轻松完成任务。无论是组合展示网站还是博客网站，Hogo 都有能力管理大量的内容类型。
+Hexo Hexo 是一个有趣的开源框架，基于 Node.js。像其他的工具一样，你可以用它搭建相当快速的网站，不仅如此，它还提供了丰富的主题和插件。
+VuePress VuePress 是由 Vue.js 支持的静态网站生成工具，而 Vue.js 是一个开源的渐进式 JavaScript 框架。
+如果你了解 HTML、CSS 和 JavaScript，那么你可以无压力地使用 VuePress。你应该可以找到几个有用的插件和主题来为你的网站建设开个头。此外，看起来 Vue.js 的更新一直很活跃，很多开发者都在关注 Vue.js。
+以上4款生成器都拥有官方文档，且简单易用，而GitHub Pages推荐的是Jekyll，我曾经用过Hexo。
+3.4. 文档版本管理 Git无敌
+3.5. 文档托管平台 公司外网 GitHub Pages ，公司内网自己搭 GitLab Pages 。
+实在不行搭Nginx或Node或Tomcat服务器，上传静态页。
+4. 拍板儿 经过一天的探索和测试，最适合的解决方案：
+Hugo作为静态网页生成器 VSCode作为编辑器 使用Markdown文本格式 Git管理代码及文档 GitHub Pages作为托管后台 5. 开始 道破——VuePress （已放弃）
+道破——Hugo 道破——VSCode Plugin——Markdown All In One 道破——Markdown 道破——Git Bash 道破——GitHub Pages</content></entry><entry><title>开发计划</title><url>/devplan.html</url><categories/><tags/><content type="html"> 项目名 当前版本 总完成度 更新时间 创建时间 备注 XXXX 0.12.2 10% 2022-8-28 2021-6-5 送交测试中</content></entry><entry><title>疑难杂症</title><url>/problem.html</url><categories/><tags/><content type="html">语言语法 数据结构和算法 游戏设计与开发 数据存储 操作系统 网络 信息安全 架构模型 自动化 生产工具 其他</content></entry><entry><title>道破系列</title><url>/lookatall.html</url><categories/><tags/><content type="html">语言语法 数据结构和算法 游戏设计与开发 数据存储 操作系统 网络 信息安全 架构模型 自动化 生产工具 道破——Hugo 点此访问 ，篇数：1，完成度：100%。 其他</content></entry><entry><title>我页面呢？</title><url>/404.html</url><categories/><tags/><content type="html">啊？我页面是不是跑路了~</content></entry><entry><title>精选好站</title><url>/flinks.html</url><categories/><tags/><content type="html">如想要交换友情链接，请在评论区留下你的站点信息，格式参考如下：
+名称： NexT 主题 说明： 保持简单的易用性和强大的功能。 站标： https://hugo-next.eu.org/imgs/hugo_next_avatar.png 网址： https://hugo-next.eu.org</content></entry><entry><title>捐赠记录</title><url>/donate.html</url><categories/><tags/><content type="html">本人特别奉上最诚挚的感谢，将祝福也同时送给所有帮助过我的小伙伴们：
+捐赠人 捐赠时间 捐赠数 备注 **影 2015-7-17 21.00 毕业快乐，祝工作顺利，开开心心！ **博 2017-5-29 100.00 感谢六哥指教！！ **的美好时光 2018-9-3 0.01 加油，奥力给！ **王 2020-1-5 6.66 请你喝杯柠檬水</content></entry></search>
